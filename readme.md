@@ -1,4 +1,7 @@
-# Usage
+### Requirement
+This package is requirement [ag(the silver searcher)](https://github.com/ggreer/the_silver_searcher) 
+
+### Usage
 Set your below configuration to your .emacs etc..
 
     (add-to-list 'load-path "path/to/this-package")
