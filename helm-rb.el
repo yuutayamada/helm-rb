@@ -9,6 +9,7 @@
 (defvar helm-rb-source
   '((name . "helm-rb")
     (candidates . helm-rb-init)
+    (candidate-in-buffer)
     (action . (lambda (line)
                 (pop-to-buffer "*ri(helm-rb)*")
                 (erase-buffer)
