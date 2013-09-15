@@ -14,7 +14,7 @@
                 (erase-buffer)
                 (insert
                  (shell-command-to-string
-                  (concat "ri --no-pager "
+                  (concat "ri -f markdown "
                           (shell-quote-argument line))))
                 (goto-char (point-min))))))
 
