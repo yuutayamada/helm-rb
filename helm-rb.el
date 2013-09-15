@@ -11,6 +11,7 @@
     (candidates . helm-rb-init)
     (action . (lambda (line)
                 (pop-to-buffer "*ri(helm-rb)*")
+                (erase-buffer)
                 (insert
                  (shell-command-to-string
                   (concat "ri --no-pager "
