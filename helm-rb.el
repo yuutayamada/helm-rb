@@ -15,7 +15,8 @@
                 (insert
                  (shell-command-to-string
                   (concat "ri --no-pager "
-                          (shell-quote-argument line))))))))
+                          (shell-quote-argument line))))
+                (goto-char (point-min))))))
 
 (defun helm-rb-setup ()
   (let* ((command
