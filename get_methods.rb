@@ -16,7 +16,7 @@ print_methods = lambda do
 
     print_modules = lambda do
       Module.constants.select do |c|
-        klass = Module.const_get(c)
+        klass = RbConfig.const_get(c)
         if klass.class == Class || klass.class == Module
           pretty_print.call(klass)
         end
