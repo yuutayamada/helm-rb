@@ -10,7 +10,7 @@
   '((name . "helm-rb")
     (candidates . helm-rb-init)
     (action . (lambda (line)
-                (pop-to-buffer "*ri*")
+                (pop-to-buffer "*ri(helm-rb)*")
                 (insert
                  (shell-command-to-string
                   (concat "ri --no-pager "
