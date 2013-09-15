@@ -1,5 +1,18 @@
 ### Requirement
-This package is requirement [ag(the silver searcher)](https://github.com/ggreer/the_silver_searcher) 
+This package is requirement [ag(the silver searcher)](https://github.com/ggreer/the_silver_searcher)
+
+### Installation
+First you need to install helm and helm-ag-r package to resolve dependencies.
+
+And then set below configuration to your .emacs
+
+    (push '(:name helm-rb
+               :type git
+               :url "https://github.com/yuutayamada/helm-rb.git"
+               :depends (helm helm-ag-r))
+               el-get-sources)
+
+Then you can install this package by M-x el-get-install helm-rb.
 
 ### Usage
 Set your below configuration to your .emacs etc..
