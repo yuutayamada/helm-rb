@@ -2,23 +2,28 @@
 # -*- coding: utf-8 :mode ruby-mode -*-
 
 def print_methods()
-  def pretty_print(klass, literal)
+
+  def pretty_print(klass)
+    def print(klass, method)
+      puts klass.to_s + "#" + method.to_s
+    end
+
     klass.methods.each do |method|
-      class_name = literal ? klass.class.to_s : klass.to_s
-      puts class_name + "#" + method.to_s
+      print(klass, method)
+    end
+
+    klass.instance_methods.each do |method|
+      print(klass, method)
     end
   end
 
-  Class.constants.select do |c|
-    if Class.const_get(c).is_a? Class
-      klass = Class.const_get(c)
-      pretty_print(klass, nil)
+  Module.constants.select do |c|
+    klass = Module.const_get(c)
+    if klass.class == Class || klass.class == Module
+      pretty_print(klass)
     end
   end
 
-  ["", 0, //, [], {}].each do |literal|
-    pretty_print(literal, true)
-  end
 end
 
 print_methods
