@@ -1,4 +1,3 @@
-;;; -*- coding: utf-8; mode: emacs-lisp; -*-
 ;;; helm-rb.el --- Search Ruby's method by ag and display helm
 
 ;; Copyright (C) 2013 by Yuta Yamada
@@ -65,5 +64,10 @@
      helm-rb-source)))
 
 (provide 'helm-rb)
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: emacs-lisp
+;; End:
 
 ;;; helm-rb.el ends here
