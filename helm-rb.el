@@ -68,6 +68,7 @@
 
 ;;;###autoload
 (defun helm-rb ()
+  (interactive)
   (let ((helm-ag-r-user-option "--nocolor"))
     (helm-ag-r-pype
      (concat "ruby " (shell-quote-argument helm-rb-get-methods-path))
