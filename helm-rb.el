@@ -4,8 +4,8 @@
 ;; Author: Yuta Yamada <cokesboy"at"gmail.com>
 ;; URL: https://github.com/yuutayamada/helm-rb
 ;; Version: 0.0.1
-;; Package-Requires: ((helm "20130916"))
-;; Keywords: Searching
+;; Package-Requires: ((helm "20130916") (helm-ag-r "20130917"))
+;; Keywords: Searching Ruby
 
 ;;; License:
 ;; This program is free software: you can redistribute it and/or modify
