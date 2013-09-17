@@ -1,3 +1,7 @@
+# helm-rb.el
+
+Search for Ruby's methods by ag and and display the methods by helm.
+
 ### Requirement
 This package is requirement [ag(the silver searcher)](https://github.com/ggreer/the_silver_searcher)
 
