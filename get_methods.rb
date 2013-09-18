@@ -43,10 +43,13 @@ print_methods = lambda do
       end
     end
 
-    if load_modules.call
-      print_modules.call
-      print_other_modules.call
-    end
+    print_modules.call
+    # comment out, below code was just slowed to display
+    # TODO: save somewhere
+    # if load_modules.call
+    #   print_modules.call
+    #   print_other_modules.call
+    # end
   rescue Exception => error
     puts error
   end
