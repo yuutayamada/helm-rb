@@ -8,6 +8,18 @@ print_methods = lambda do
   end
 
   begin
+    load_modules = lambda do
+      paths = []
+      $LOAD_PATH.each do |path|
+        paths << Dir.entries(path) if Dir.exist? path
+      end
+      paths.flatten.uniq.each do |path|
+        # load modules without below regexp
+        require path if /\.rb$/ =~ path && /debug|benchmark|profile/ !~ path
+      end
+      return true
+    end
+
     pretty_print = lambda do |klass|
       print = lambda {|method| puts klass.to_s + "#" + method.to_s}
       klass.instance_methods(false).each {|method| print.call(method)}
@@ -31,9 +43,10 @@ print_methods = lambda do
       end
     end
 
-    print_modules.call
-    print_other_modules.call
-
+    if load_modules.call
+      print_modules.call
+      print_other_modules.call
+    end
   rescue Exception => e
     puts e
   end
