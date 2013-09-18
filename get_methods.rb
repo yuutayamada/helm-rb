@@ -9,11 +9,11 @@ print_methods = lambda do
 
   begin
     pretty_print = lambda do |klass|
-      print = lambda {|klass, method| puts klass.to_s + "#" + method.to_s}
-      klass.instance_methods(false).each {|method| print.call(klass, method)}
-      klass.singleton_methods(false).each {|method| print.call(klass, method)}
-      klass.public_instance_methods(false).each {|method| print.call(klass, method)}
-      klass.private_instance_methods(false).each {|method| print.call(klass, method)}
+      print = lambda {|method| puts klass.to_s + "#" + method.to_s}
+      klass.instance_methods(false).each {|method| print.call(method)}
+      klass.singleton_methods(false).each {|method| print.call(method)}
+      klass.public_instance_methods(false).each {|method| print.call(method)}
+      klass.private_instance_methods(false).each {|method| print.call(method)}
     end
 
     print_modules = lambda do
