@@ -47,8 +47,8 @@ print_methods = lambda do
       print_modules.call
       print_other_modules.call
     end
-  rescue Exception => e
-    puts e
+  rescue Exception => error
+    puts error
   end
 end
 
