@@ -29,8 +29,6 @@
     (expand-file-name "get_methods.rb" (file-name-directory current)))
   "The path to the program `get_methods.rb'.")
 
-(defvar helm-rb-methods-list nil)
-
 (defvar helm-rb-source
   '((name . "helm-rb")
     (candidate-in-buffer)
@@ -44,20 +42,6 @@
     (concat "ri -f markdown "
             (shell-quote-argument line))))
   (goto-char (point-min)))
-
-(defun helm-rb-setup ()
-  (let* ((command
-          (concat
-           "ruby "
-           (shell-quote-argument helm-rb-get-methods-program)))
-         (methods-list (split-string
-                        (shell-command-to-string command) "\n")))
-    (setq helm-rb-methods-list methods-list)))
-
-(defun helm-rb-init ()
-  (if helm-rb-methods-list
-      helm-rb-methods-list
-    (helm-rb-setup)))
 
 ;;;###autoload
 (defun helm-rb ()
