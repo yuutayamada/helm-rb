@@ -25,16 +25,9 @@
 (require 'helm-ag-r)
 
 (defvar helm-rb-get-methods-path
-  (let* ((name "get_methods.rb")
-         (path
-          (file-name-as-directory
-           (file-name-directory (concat "./" name))))
-         (file-path
-          (expand-file-name (format "%s%s" path name))))
-    (if (file-exists-p file-path)
-        file-path
-      "Failed to set get_methods.rb's path"))
-  "A path for get_methods.rb.")
+  (let ((current (or load-file-name (buffer-file-name))))
+    (expand-file-name "get_methods.rb" (file-name-directory current)))
+  "The path to the program `get_methods.rb'.")
 
 (defvar helm-rb-methods-list nil)
 
