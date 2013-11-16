@@ -20,6 +20,9 @@
 ;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;;; Commentary:
+;; See readme.md
+;;; Code:
 
 (require 'helm)
 (require 'helm-ag-r)
@@ -45,6 +48,9 @@
 
 ;;;###autoload
 (defun helm-rb ()
+  "Search Ruby's method by using helm and ag.
+If you want to change methods searching program, you can specify
+the program's path to `helm-rb-get-methods-program' variable."
   (interactive)
   (let ((helm-ag-r-user-option "--nocolor"))
     (helm-ag-r-pype
