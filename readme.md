@@ -3,9 +3,10 @@
 Search for Ruby's methods by ag and display the methods by helm.
 
 ### Requirement
-This package is requirements [ag(the silver searcher)](https://github.com/ggreer/the_silver_searcher), helm.el and helm-ag-r.el
+This package is requirements [ag(the silver searcher)](https://github.com/ggreer/the_silver_searcher), helm.el, helm-ag-r.el and ri.
 
 ### Installation
+Make sure whether you can use ag and ri command.
 
 For package.el
 You need register melpa repository if you didn't register it yet.
@@ -16,11 +17,10 @@ You need register melpa repository if you didn't register it yet.
 ```
 
 Then you can install helm-rb by M-x package-install RET helm-rb.
-helm.el and helm-ag-r are installed automatically, so you don't care about those packages.(but you need to install ag)
-
+helm.el and helm-ag-r.el are installed automatically, so you don't care about those packages.
 
 For el-get
-First you need to install helm and helm-ag-r package to resolve dependencies.
+Firstly you need to install helm and helm-ag-r package to resolve dependencies.
 
 And then set below configuration to your .emacs
 
